@@ -76,8 +76,7 @@ void decript(char message[max_len], long rotation){
         if(control >= 'a' && control <= 'z'){
             control = control+rotation;
             if(control > 'z'){
-                // control = control - 'z' - 'a' - 1;
-                control = 1 - 'a' -'z' - control;
+                control = control - 'z' + 'a' - 1;
             }
             message[i] = control;
         }
